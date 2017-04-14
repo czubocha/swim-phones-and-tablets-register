@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tomaszczubocha.cw_4_2.Telefony"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="słuchawki"
+                    android:id="@+id/sluchawki"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kabel"
+                    android:id="@+id/kabel"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/ladowarka"
+                    android:layout_toEndOf="@+id/ladowarka" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ładowarka"
+                    android:id="@+id/ladowarka"
+                    android:checked="false"
+                    android:onClick="onCheckboxClicked"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/sluchawki"
+                    android:layout_toEndOf="@+id/sluchawki" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_weight="0.2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pudełko"
+                            android:id="@+id/pudelko"
+                            android:checked="false"
+                            android:allowUndo="false"
+                            android:onClick="onRadioButtonClicked"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Brak pudełka"
+                            android:id="@+id/brakpudelka"
+                            android:checked="false"
+                            android:onClick="onRadioButtonClicked"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zamienne pudełko"
+                            android:id="@+id/zamiennepudelko"
+                            android:checked="false"
+                            android:onClick="onRadioButtonClicked" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="latarka"
+                        android:id="@+id/latarka"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="false" />
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="simlock"
+                        android:id="@+id/simlock"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="false"
+                        android:textOff="bez simlocka"
+                        android:textOn="simlock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar"
+                    android:layout_gravity="center_horizontal"
+                    android:max="70"
+                    android:progress="40" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rozmiar ekranu"
+                    android:id="@+id/ekran" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cale"
+                    android:id="@+id/cale" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/numer"
+                    android:hint="model"
+                    android:layout_marginBottom="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zapisz"
+                    android:id="@+id/zapisywanie"
+                    android:onClick="podsumowanie"
+                    android:layout_weight="0.5" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

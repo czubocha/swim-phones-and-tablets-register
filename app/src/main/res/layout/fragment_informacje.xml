@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tomaszczubocha.cw_4_2.Informacje"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Witaj w aplikacji służącej do prowadzenia spisu telefonów i tabletów!"
+                android:id="@+id/textView3" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="85dp"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/tablet_i_telefon" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="85dp"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/tablet_i_telefon2"/>
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="85dp"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/tablet_i_telefon3"
+                    android:layout_weight="0.39" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ile telefonow"
+                android:id="@+id/telefony" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="ile tabletow"
+                android:id="@+id/tablety" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="średnia wielkość ekranu"
+                android:id="@+id/wielkosc_ekranu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="udział Androida w tabletach"
+                android:id="@+id/android_w_tab" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="procent urządzeń z ładowarkami"
+                android:id="@+id/ladowarki" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="procent telefonów z simlockiem"
+                android:id="@+id/simlocki" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="skasuj bazę"
+                    android:id="@+id/kasuj"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
